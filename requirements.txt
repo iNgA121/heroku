@@ -1,11 +1,7 @@
 streamlit 
 pandas 
 numpy
-urllib.request 
 urlopen
-sklearn.feature_extraction.text 
 countvectorizer
-sklearn.metrics.pairwise 
 cosine_similarity
-IPython.core.display 
 HTML
