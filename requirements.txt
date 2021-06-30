@@ -1,7 +1,11 @@
-import streamlit 
-import pandas 
-import numpy
-from urllib.request import urlopen
-from sklearn.feature_extraction.text import CountVectorizer
-from sklearn.metrics.pairwise import cosine_similarity
-from IPython.core.display import HTML
+streamlit 
+pandas 
+numpy
+urllib.request 
+urlopen
+sklearn.feature_extraction.text 
+countvectorizer
+sklearn.metrics.pairwise 
+cosine_similarity
+IPython.core.display 
+HTML
