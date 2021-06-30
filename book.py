@@ -13,12 +13,12 @@ with open('BX-CSV-Dump.zip','wb') as file:
     file.write(url.read())
 
 # Load ratings
-ratings = st.cache(pd.read_csv)('BX-Book-Ratings.csv',encoding='cp1251', sep=';')
+ratings = pd.read_csv('BX-Book-Ratings.csv',encoding='cp1251', sep=';')
 ratings = ratings[ratings['Book-Rating']!=0]
 
 # Load books
 col_names = ['ISBN','Book-Title','Book-Author','Year-Of_Publication','Publisher','Image-URL-S','Image-URL-M','Image-URL-L']
-books = st.cache(pd.read_csv)('BX-Books.csv', encoding='cp1251', sep =';', names=col_names, dtype='unicode',skiprows=[0])
+books = pd.read_csv('BX-Books.csv', encoding='cp1251', sep =';', names=col_names, dtype='unicode',skiprows=[0])
 
 # Users_ratigs = pd.merge(ratings, users, on=['User-ID'])
 dataset = pd.merge(ratings, books, on=['ISBN'])
