@@ -1,11 +1,3 @@
-# Import
-import streamlit as st
-import pandas as pd
-import numpy as np
-from urllib.request import urlopen
-from sklearn.feature_extraction.text import CountVectorizer
-from sklearn.metrics.pairwise import cosine_similarity
-
 # Open zipfile
 url = urlopen('http://www2.informatik.uni-freiburg.de/~cziegler/BX/BX-CSV-Dump.zip')
 with open('BX-CSV-Dump.zip','wb') as file:      
@@ -93,7 +85,6 @@ for title in mylist:
 union = pd.DataFrame(zip(book_titles, avgrating, url_s), columns=['Book_title','Avg_rating','URL'])
 
 # Edit image url format 
-from IPython.core.display import HTML
 def path_to_image_html(path):
     return '<img src="'+ path + '" >'
 union['URL']=path_to_image_html(union['URL'])
