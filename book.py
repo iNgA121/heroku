@@ -13,7 +13,7 @@ with open('BX-CSV-Dump.zip','wb') as file:
     file.write(url.read())
 
 # Load ratings
-ratings = pd.read_csv('BX-Book-Ratings.csv',encoding='cp1251', sep=';')
+ratings = pd.read_csv('C:\Users\Inga\Desktop\books\BX-Book-Ratings.csv',encoding='cp1251', sep=';')
 ratings = ratings[ratings['Book-Rating']!=0]
 
 # Load books
