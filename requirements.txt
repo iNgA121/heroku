@@ -2,6 +2,6 @@ streamlit
 pandas 
 numpy
 urlopen
-sklearn.feature_extraction.text.CountVectorizer
+sklearn.feature_extraction.text.countvectorizer
 cosine_similarity
 HTML
