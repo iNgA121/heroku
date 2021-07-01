@@ -104,4 +104,4 @@ union['URL']=path_to_image_html(union['URL'])
 
 final = HTML(union.to_html(escape=False, formatters=dict(path_to_image_html=[])))
 st.write(final)
-© 2021 GitHub, Inc.
+
