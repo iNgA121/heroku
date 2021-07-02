@@ -23,7 +23,7 @@ st.subheader('This simple app allows you to select and visualize the chart of re
 
 
 a = ['Searching ...']
-b = dataset_lower['Book-Title'].unique().tolist()
+b = sorted(dataset_lower['Book-Title'].unique().tolist())
 menu = a + b
 
 book = st.selectbox('', menu)
