@@ -6,8 +6,6 @@ from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 from IPython.core.display import HTML
 
-st.write("DB username:", st.secrets["db_username"])
-st.write("DB password:", st.secrets["db_password"])
 # Load ratings
 ratings = st.cache(pd.read_csv)('BX-Book-Ratings.csv',encoding='cp1251', sep=';')
 ratings = ratings[ratings['Book-Rating']!=0]
