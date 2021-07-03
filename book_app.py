@@ -105,4 +105,3 @@ else:
   st.header('The most favorable books')
   final = HTML(union.to_html(escape=False, formatters=dict(path_to_image_html=[])))
   st.write(final)
-
