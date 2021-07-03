@@ -1,6 +1,6 @@
 streamlit 
 pandas 
 numpy
-urlopen
+cosine_similarity
 sklearn
 HTML
