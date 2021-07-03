@@ -29,15 +29,14 @@ menu = a + b
 book = st.selectbox('', menu)
 
 # Specific User-ID's for selected book
-if book != menu[0]:
+if book == menu[0]:
+  st.write('**Empty list, please select your favourite book**')
+else:
   readers = dataset_lower['User-ID'][dataset_lower['Book-Title']==book]
   readers = np.unique(readers.tolist())
   st.write('**You selected: **', book)
-else:
-  st.write('**Empty list, please select your favourite book**')
 
 # Final dataset
-if book != menu[0]:
   all_books_readers = dataset_lower[(dataset_lower['User-ID'].isin(readers))]
 
 # Book occurence through readers, general similarity
@@ -98,11 +97,12 @@ if book != menu[0]:
   def path_to_image_html(path):
     return '<img src="'+ path + '" >'
   union['URL']=path_to_image_html(union['URL'])
-else:
-  print('END')
 
 # Rendering the dataframe as HTML table
-if book != menu[0]:
+if book == menu[0]:
+  print('end')
+else:
   st.header('The most favorable books')
   final = HTML(union.to_html(escape=False, formatters=dict(path_to_image_html=[])))
   st.write(final)
+
