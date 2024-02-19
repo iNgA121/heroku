@@ -1,5 +1,5 @@
 streamlit 
 pandas 
 numpy
--U scikit-learn
-HTML
+scikit-learn
+ipython
